@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Book} from "../../book.model";
 
 @Component({
   selector: 'app-book-item',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./book-item.component.css']
 })
 export class BookItemComponent {
+  @Input() book: Book;
+  @Output() bookSelected = new EventEmitter<void>();
 
+  onSelected() {
+    this.bookSelected.emit();
+  }
 }

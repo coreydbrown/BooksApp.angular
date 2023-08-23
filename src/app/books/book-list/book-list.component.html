@@ -1,21 +1,14 @@
-<app-book-item></app-book-item>
-
 <div class="row mt-4">
   <div class="col-12 mb-3">
     <button class="btn btn-success">Add Book</button>
   </div>
   <div class="col-12">
     <ul class="list-group">
-      <li
-        class="list-group-item d-flex justify-content-between align-items-center"
-        *ngFor="let book of books"
-      >
-        <div class="float-start me-3">
-          <h4 class="mb-1">{{book.title}}</h4>
-          <p class="mb-1">{{book.author}}</p>
-        </div>
-        <img [src]="book.imagePath" alt="" class="img-fluid" style="max-height: 50px;"/>
-      </li>
+      <app-book-item
+        *ngFor="let individualBook of books"
+        [book]="individualBook"
+        (bookSelected)="onBookSelected(individualBook)"
+      ></app-book-item>
     </ul>
   </div>
 </div>

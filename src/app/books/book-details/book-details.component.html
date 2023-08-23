@@ -1,33 +1,32 @@
-<div class="row mb-3">
-  <div class="col-12">
-    <img src="" alt="Book Image" class="img-fluid">
+<div class="row mb-4 justify-content-center">
+  <div class="col-12 col-md-6 text-center">
+    <img [src]="book.imagePath" alt="Book Image" class="img-fluid rounded shadow-sm" style="max-width: 150px;">
   </div>
 </div>
-<div class="row mb-3">
-  <div class="col-12">
-    <h1>Book Title</h1>
+
+<div class="row mb-2 justify-content-center">
+  <div class="col-12 text-center">
+    <h1 class="mb-1">{{book.title}}</h1>
+    <h2 class="text-muted">{{book.author}}</h2>
   </div>
 </div>
-<div class="row mb-3">
-  <div class="col-12">
+
+<div class="row mb-4 justify-content-center">
+  <div class="col-12 text-center">
+    <p class="font-weight-light">{{book.description}}</p>
+  </div>
+</div>
+
+<div class="row mb-3 justify-content-center">
+  <div class="col-12 text-center">
     <div class="btn-group">
-      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-        Manage Book
+      <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="bi bi-gear-fill me-2"></i>Manage Book
       </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Edit Book</a></li>
-        <li><a class="dropdown-item" href="#">Delete Book</a></li>
+      <ul class="dropdown-menu shadow">
+        <li><a class="dropdown-item" href="#"><i class="bi bi-pencil-square me-2"></i>Edit Book</a></li>
+        <li><a class="dropdown-item" href="#"><i class="bi bi-trash-fill me-2"></i>Delete Book</a></li>
       </ul>
     </div>
-  </div>
-</div>
-<div class="row mb-2">
-  <div class="col-12">
-    <h5>Description</h5>
-  </div>
-</div>
-<div class="row">
-  <div class="col-12">
-    <h5>Ingredients</h5>
   </div>
 </div>
