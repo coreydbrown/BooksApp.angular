@@ -7,7 +7,6 @@
       <app-book-item
         *ngFor="let individualBook of books"
         [book]="individualBook"
-        (bookSelected)="onBookSelected(individualBook)"
       ></app-book-item>
     </ul>
   </div>
