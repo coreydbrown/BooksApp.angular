@@ -7,6 +7,9 @@ import { BooksComponent } from './books/books.component';
 import { BookListComponent } from './books/book-list/book-list.component';
 import { BookItemComponent } from './books/book-list/book-item/book-item.component';
 import { BookDetailsComponent } from './books/book-details/book-details.component';
+import { QuotesComponent } from './quotes/quotes.component';
+import { QuoteListComponent } from './quotes/quote-list/quote-list.component';
+import { QuoteItemComponent } from './quotes/quote-list/quote-item/quote-item.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { BookDetailsComponent } from './books/book-details/book-details.componen
     BooksComponent,
     BookListComponent,
     BookItemComponent,
-    BookDetailsComponent
+    BookDetailsComponent,
+    QuotesComponent,
+    QuoteListComponent,
+    QuoteItemComponent
   ],
   imports: [
     BrowserModule
