@@ -7,13 +7,33 @@
 <div class="row mb-2 justify-content-center">
   <div class="col-12 text-center">
     <h1 class="mb-1">{{book.title}}</h1>
-    <h2 class="text-muted">{{book.author}}</h2>
+    <h2 class="text-muted">By {{book.author}}</h2>
   </div>
 </div>
 
 <div class="row mb-4 justify-content-center">
   <div class="col-12 text-center">
     <p class="font-weight-light">{{book.description}}</p>
+  </div>
+</div>
+
+<div class="row mb-4 justify-content-center">
+  <div class="col-12 text-center">
+    <ul class="list-group">
+      <li *ngFor="let quote of book.quotes" class="list-group-item">
+        <h6>"{{quote.content}}"</h6>
+        <span>-{{quote.author}}, {{quote.book}}</span>
+        <div>
+          <button
+            class="btn btn-outline-warning"
+            style="margin-top: 1rem"
+            (click)="onAddQuoteToFavQuotes(quote)"
+          >
+              Add to Favorite Quotes
+          </button>
+        </div>
+      </li>
+    </ul>
   </div>
 </div>
 
