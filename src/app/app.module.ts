@@ -10,6 +10,7 @@ import { BookDetailsComponent } from './books/book-details/book-details.componen
 import { QuotesComponent } from './quotes/quotes.component';
 import { QuoteListComponent } from './quotes/quote-list/quote-list.component';
 import { QuoteItemComponent } from './quotes/quote-list/quote-item/quote-item.component';
+import {QuotesService} from "./quotes/quotes.service";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { QuoteItemComponent } from './quotes/quote-list/quote-item/quote-item.co
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [QuotesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
