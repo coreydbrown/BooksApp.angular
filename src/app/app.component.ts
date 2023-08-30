@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'books-angular-app';
+  @Input() featureSelected = "books";
+
+  onNavigate(featureSelected: string) {
+    this.featureSelected = featureSelected;
+  }
 }

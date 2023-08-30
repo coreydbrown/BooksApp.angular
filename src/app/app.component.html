@@ -1,5 +1,5 @@
-<app-header></app-header>
+<app-header (featureSelected)="onNavigate($event)"></app-header>
 <div class="container">
-  <app-books></app-books>
-  <app-quotes></app-quotes>
+  <app-books *ngIf="featureSelected === 'books'"></app-books>
+  <app-quotes *ngIf="featureSelected === 'quotes'"></app-quotes>
 </div>

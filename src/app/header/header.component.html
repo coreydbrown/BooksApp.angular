@@ -7,10 +7,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#">Favorite Books</a>
+          <a
+            (click)="onFeatureSelected('books')"
+            class="nav-link"
+            href="#">Favorite Books</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Loved Quotes</a>
+          <a
+            (click)="onFeatureSelected('quotes')"
+            class="nav-link"
+            href="#">Loved Quotes</a>
         </li>
       </ul>
     </div>
