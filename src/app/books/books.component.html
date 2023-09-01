@@ -3,9 +3,6 @@
     <app-book-list></app-book-list>
   </div>
   <div class="col-md-7">
-    <app-book-details
-      *ngIf="selectedBook"
-      [selectedBook]="selectedBook"
-    ></app-book-details>
+    <router-outlet></router-outlet>
   </div>
 </div>

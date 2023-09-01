@@ -1,22 +1,16 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light">
   <div class="container">
-    <a class="navbar-brand" href="#">Books App</a>
+    <a class="navbar-brand" routerLink="/">Books App</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a
-            (click)="onFeatureSelected('books')"
-            class="nav-link"
-            href="#">Favorite Books</a>
+          <a routerLink="/books" class="nav-link">Favorite Books</a>
         </li>
         <li class="nav-item">
-          <a
-            (click)="onFeatureSelected('quotes')"
-            class="nav-link"
-            href="#">Loved Quotes</a>
+          <a routerLink="/quotes" class="nav-link">Loved Quotes</a>
         </li>
       </ul>
     </div>

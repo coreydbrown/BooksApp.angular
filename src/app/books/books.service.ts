@@ -1,12 +1,10 @@
 import {Book} from "./book.model";
-import {EventEmitter, Injectable} from "@angular/core";
+import {Injectable} from "@angular/core";
 import {Quote} from "../quotes/quote.model";
 import {QuotesService} from "../quotes/quotes.service";
 
 @Injectable()
 export class BooksService {
-  bookSelected = new EventEmitter<Book>();
-
   private books: Book[] = [
     new Book(
       "Salem's Lot",
@@ -30,12 +28,15 @@ export class BooksService {
 
   constructor(private quotesService: QuotesService) {}
 
+  getBook(index: number) {
+    return this.books[index];
+  }
+
   getBooks() {
     return this.books.slice();
   }
 
   addQuoteToFavQuotes(quote: Quote) {
     this.quotesService.addQuote(quote);
-    console.log(this.quotesService.getQuotes())
   }
 }

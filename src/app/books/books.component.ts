@@ -1,5 +1,4 @@
-import {Component, OnInit} from '@angular/core';
-import {Book} from "./book.model";
+import {Component} from '@angular/core';
 import {BooksService} from "./books.service";
 
 @Component({
@@ -8,15 +7,6 @@ import {BooksService} from "./books.service";
   styleUrls: ['./books.component.css'],
   providers: [BooksService]
 })
-export class BooksComponent implements OnInit {
-  selectedBook: Book;
+export class BooksComponent {
 
-  constructor(private booksService: BooksService) {}
-
-  ngOnInit() {
-    this.booksService.bookSelected.subscribe(
-      (book: Book) => {
-        this.selectedBook = book;
-      });
-  }
 }

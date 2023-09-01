@@ -5,8 +5,9 @@
   <div class="col-12">
     <ul class="list-group">
       <app-book-item
-        *ngFor="let individualBook of books"
+        *ngFor="let individualBook of books; let i = index"
         [book]="individualBook"
+        [index]="i"
       ></app-book-item>
     </ul>
   </div>
