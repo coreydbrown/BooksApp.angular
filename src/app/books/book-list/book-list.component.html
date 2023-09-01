@@ -3,7 +3,7 @@
     <button class="btn btn-success">Add Book</button>
   </div>
   <div class="col-12">
-    <ul class="list-group">
+    <ul class="list-group nav-pills">
       <app-book-item
         *ngFor="let individualBook of books; let i = index"
         [book]="individualBook"
