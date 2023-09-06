@@ -13,6 +13,7 @@ import { QuoteItemComponent } from './quotes/quote-list/quote-item/quote-item.co
 import {QuotesService} from "./quotes/quotes.service";
 import {AppRoutingModule} from "./app-routing.module";
 import { BookStartComponent } from './books/book-start/book-start.component';
+import { BookEditComponent } from './books/book-edit/book-edit.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { BookStartComponent } from './books/book-start/book-start.component';
     QuotesComponent,
     QuoteListComponent,
     QuoteItemComponent,
-    BookStartComponent
+    BookStartComponent,
+    BookEditComponent
   ],
   imports: [
     BrowserModule,
