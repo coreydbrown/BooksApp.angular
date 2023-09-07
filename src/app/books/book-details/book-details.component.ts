@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Book} from "../book.model";
 import {BooksService} from "../books.service";
 import {Quote} from "../../quotes/quote.model";
-import {ActivatedRoute, Params} from "@angular/router";
+import {ActivatedRoute, Params, Router} from "@angular/router";
 
 @Component({
   selector: 'app-book-details',
@@ -14,7 +14,8 @@ export class BookDetailsComponent implements OnInit{
   id: number;
 
   constructor(private booksService: BooksService,
-              private route: ActivatedRoute) {}
+              private route: ActivatedRoute,
+              private router: Router) {}
 
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {
@@ -25,5 +26,9 @@ export class BookDetailsComponent implements OnInit{
 
   onAddQuoteToFavQuotes(quote: Quote) {
     this.booksService.addQuoteToFavQuotes(quote);
+  }
+
+  onEditBook() {
+    this.router.navigate(['edit'], {relativeTo: this.route} )
   }
 }
